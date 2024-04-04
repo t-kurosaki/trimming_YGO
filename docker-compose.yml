@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  python:
+    build: ./infra/python
+    volumes: 
+      - ./src:/work
+      - $CARD_IMAGE_PATH:/images
+    tty: true             # ターミナル入力を受け付ける
